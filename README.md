@@ -26,7 +26,7 @@ Start (manual)
 |---|---|
 | `whatsapp-outreach-workflow.json` | The n8n workflow — import this |
 | `data/leads_template.csv` | CSV format the workflow expects (sample rows) |
-| `data/agartala_leads.csv` | Real sample lead list: 113 Agartala businesses (from public Google Maps listings) |
+| [`agartala_leads.csv`](https://github.com/ca4219248-blip/whatsapp-lead-outreach-n8n/releases/download/v1.0.0/agartala_leads.csv) | Real sample lead list: 113 Agartala businesses (from public Google Maps listings) — download from Releases and place in your n8n data folder |
 
 ## Quick start
 
@@ -51,7 +51,7 @@ Start (manual)
    - Name: `Authorization`
    - Value: `Bearer YOUR_ACCESS_TOKEN`
    - Assign it to the node (already set to use Header Auth).
-4. Put your leads CSV on the n8n instance (self-hosted: use the `/data` folder; n8n Cloud: replace the *Read Leads File* node with a Google Sheets/Drive trigger).
+4. Download `agartala_leads.csv` from the [Releases](https://github.com/ca4219248-blip/whatsapp-lead-outreach-n8n/releases) page (or use your own CSV in the same format as `data/leads_template.csv`) and put it on your n8n instance (self-hosted: the `/data` folder; n8n Cloud: replace the *Read Leads File* node with a Google Sheets/Drive trigger).
 5. If you want logging, enable the **Log to Google Sheet** node, create a sheet with columns `Timestamp, Business, Phone, Category, Status`, and paste your Sheet ID into the node.
 
 ### 3. Test, then run
